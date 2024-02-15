@@ -1,9 +1,20 @@
 def solution(s):
-    value_list = list(map(int, s.split(" ")))
-    value_min = min(value_list)
-    value_max = max(value_list)
+    s = s.lower()
+    text_list = s.split(" ")
+    answer = ''
+    for index, text in enumerate(text_list):
+        if(text == ""):
+            answer += " "
+            continue
+
+        upper = text[0].upper()
+        text = upper + text[1:]
+
+        if(len(answer) == 0):
+            answer += text
+        else:
+            answer += " "+ text
     
-    answer = f'{value_min} {value_max}'
     return answer
 
-print(solution("-1 -2 -3 -4"))
+print(solution("a   b"))
