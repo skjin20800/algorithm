@@ -1,15 +1,9 @@
-def solution(num):
-    answer = 0
-    while(True):
-        answer = answer+1
-        if(num % 2 == 0):
-            num = num/2
-        else:
-            num = num*3+1
-
-        if(num == 1):
-            break
-        
-        if(answer ==500):
-            break
+def solution(s):
+    value_list = list(map(int, s.split(" ")))
+    value_min = min(value_list)
+    value_max = max(value_list)
+    
+    answer = f'{value_min} {value_max}'
     return answer
+
+print(solution("-1 -2 -3 -4"))
