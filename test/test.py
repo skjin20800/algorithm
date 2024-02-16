@@ -1,20 +1,7 @@
-def solution(s):
-    s = s.lower()
-    text_list = s.split(" ")
-    answer = ''
-    for index, text in enumerate(text_list):
-        if(text == ""):
-            answer += " "
-            continue
-
-        upper = text[0].upper()
-        text = upper + text[1:]
-
-        if(len(answer) == 0):
-            answer += text
-        else:
-            answer += " "+ text
-    
+def solution(seoul):
+    result = 0
+    for index, item in enumerate(seoul):
+        if(item == "Kim"):
+            result = index
+    answer = f'김서방은 {result}에 있다'
     return answer
-
-print(solution("a   b"))
