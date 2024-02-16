@@ -1,7 +1,5 @@
-def solution(seoul):
-    result = 0
-    for index, item in enumerate(seoul):
-        if(item == "Kim"):
-            result = index
-    answer = f'김서방은 {result}에 있다'
+def solution(numbers):
+    answer = 45
+    for item in numbers:
+        answer = answer - item    
     return answer
