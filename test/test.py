@@ -1,5 +1,10 @@
-def solution(numbers):
-    answer = 45
-    for item in numbers:
-        answer = answer - item    
-    return answer
+def solution(nums):
+    set_item = set(nums)
+    value = int(len(set_item))
+    limit = len(nums)/2
+    
+    if value< limit:
+        return value
+    
+    return limit
+    
