@@ -1,29 +1,25 @@
-def solution(progresses, speeds):
-    answer = []
+def solution(citations):
+    answer = 0
     
-    day = 0
     result = []
-    for item1, speed in zip(progresses, speeds):
+    
+    for i in range(1000):
         
-        pg_day = day
-        item1 = item1 + (pg_day * speed)
-        while item1 < 100:
-            item1 += speed
-            day += 1
+        value = 0
+        for item in citations:
+            if i < item :
+                value += 1
+        result.append(value)
+            
         
-        result.append(day)
-    
-    result_dic = {}
-    for val in result:
-        if val in result_dic:
-            result_dic[val] += 1
-        else:            
-            result_dic[val] = 1
-    answer = list(result_dic.values())
-    
-    
-    #for val in result:
+    for i, item in enumerate(result):
+        print(f" i {i+1} item :{item}" )
+        if (i+1) <= item:
+            answer = i+1
+            print(answer)
+        else:
+            break
+            
+
         
-    
-    
     return answer
